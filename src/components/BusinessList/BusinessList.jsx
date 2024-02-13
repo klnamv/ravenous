@@ -1,11 +1,12 @@
 import React from 'react';
-import Business from './Business/Business';
+import styles from "./BusinessList.module.css";
+import Business from "../Business/Business";
+
 
 const BusinessList = () => {
 
     const businesses = [
-        {   
-            id: 1,
+        {         
             imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
             name: 'MarginOtto Pizzeria',
             address: '1010 Paddington Way',
@@ -17,7 +18,6 @@ const BusinessList = () => {
             reviewCount: 90
         },
         { 
-            id: 2,
             imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
             name: 'MarginOtto Pizzeria',
             address: '1010 Paddington Way',
@@ -29,7 +29,6 @@ const BusinessList = () => {
             reviewCount: 90
         },
         {
-            id: 3,
             imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
             name: 'MarginOtto Pizzeria',
             address: '1010 Paddington Way',
@@ -42,15 +41,15 @@ const BusinessList = () => {
         }
     ];
     return (
-        <>
-        {
-            businesses.map((business, index) => {
-                return <Business key={index} business={business} />;
-            })
-        }
-        </>
+        <div className={styles.BusinessList}>
+            <Business />
+            <Business />
+            <Business />
+            <Business />
+            <Business />
+            <Business />
+        </div>
     )
-
 }
 
 export default BusinessList;

@@ -1,13 +1,14 @@
 import logo from './logo.svg';
-import './App.css';
-import Business from './components/Business/Business';
+import styles from './App.module.css'
+import BusinessList from './components/BusinessList/BusinessList';
 import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
+      <h1>ravenous</h1>
       <SearchBar />
-      <Business />
+      <BusinessList />
     </div>
   );
 }
